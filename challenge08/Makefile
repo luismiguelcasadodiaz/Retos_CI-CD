@@ -1,11 +1,26 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
-TARGET=starter
+SRC=starter.c suma.c
+TARGET=programa
+TEST_TARGET=test_challenge08
 
-all: $(TARGET)
 
-$(TARGET): starter.c
-	$(CC) $(CFLAGS) -o $(TARGET) starter.c
+all: build
+
+build: $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+	./$(TARGET)
+
+test: test_challenge08.c
+	$(CC) $(CFLAGS) -DDEBUG -o $(TEST_TARGET) $(SRC) test_challenge08.c
+	./$(TEST_TARGET)
+
+package: build
+	mkdir -p dist
+	cp $(TARGET) dist/
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGET) $(TEST_TARGET)
+	rm -rf dist
+
+re: clean build
