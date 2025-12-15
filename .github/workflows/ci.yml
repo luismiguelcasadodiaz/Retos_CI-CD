@@ -5,15 +5,12 @@ on:
   pull_request:
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+  docker-build:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Run tests
-      run: make test    
-    - name: Build
-      run: make all
+    - name: Build Docker image
+      run: docker build -t miapp .
+    - name: Run container
+      run: docker run --rm miapp
 

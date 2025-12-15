@@ -1,8 +1,22 @@
 #include <stdio.h>
+#include "calc.h"
+#ifdef DEBUG
+#include "test_challenge10.h"
+#endif
 
-int suma(int a, int b) { return a + b; }
+
 
 int main() {
-    printf("Resultado en Docker: %d\n", suma(4,5));
+
+#ifdef DEBUG
+    // Este código solo se ejecuta si NDEBUG NO está definida
+    printf("Ejecutando tests...\n");
+    test_suma();
+    test_resta();
+#endif
+
+    printf("Pipeline local simulado.\n");
+
+
     return 0;
 }
