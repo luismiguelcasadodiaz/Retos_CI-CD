@@ -1,8 +1,22 @@
 #include <stdio.h>
+#include "calc.h"
+#ifdef DEBUG
+#include "test_challenge06.h"
+#endif
 
-int suma(int a, int b);
+
 
 int main() {
-    printf("CI con GitHub Actions listo.\n");
+
+#ifdef DEBUG
+    // Este código solo se ejecuta si NDEBUG NO está definida
+    printf("Ejecutando tests...\n");
+    test_suma();
+    test_resta();
+#endif
+
+    printf("Pipeline local simulado.\n");
+
+
     return 0;
 }

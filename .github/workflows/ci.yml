@@ -13,3 +13,5 @@ jobs:
       run: make all
     - name: Run tests
       run: make test
+    - name: Test Challenge 017
+      run: cd challenge07 && make test
