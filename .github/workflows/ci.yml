@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build Docker image
-      run: docker build -t miapp .
+      run: docker build -t miapp ./challenge11/
     - name: Run container
       run: docker run --rm miapp
 
