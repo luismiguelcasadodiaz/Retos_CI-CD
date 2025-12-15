@@ -5,7 +5,7 @@ TARGET=programa
 TEST_TARGET=test_challenge06
 
 
-all: test build
+all: build
 
 build: $(SRC)
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
