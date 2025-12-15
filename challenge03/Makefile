@@ -8,8 +8,8 @@ all: $(TARGET)
 $(TARGET): starter.c
 	$(CC) $(CFLAGS) -o $(TARGET) starter.c
 
-test: starter.c test_challenge03.c
-	$(CC) $(CFLAGS) -o $(TEST_TARGET) starter.c test_challenge03.c
+test: test_challenge03.c
+	$(CC) $(CFLAGS) -o $(TEST_TARGET) test_challenge03.c
 	./$(TEST_TARGET)
 
 clean:

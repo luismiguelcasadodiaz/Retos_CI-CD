@@ -1,7 +1,8 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
 NAME=calc
-SRCS=starter.c suma.c resta.c multiplicacion.c division.c
+SRCS=starter.c suma.c resta.c mult.c div.c
+SRCS_TEST=test_challenge04.c suma.c resta.c mult.c div.c
 OBJS=$(SRCS:.c=.o)
 TEST=test_challenge04
 
@@ -21,6 +22,6 @@ fclean: clean
 
 re: fclean all
 
-test: $(SRCS) test_challenge04.c
-	$(CC) $(CFLAGS) -o $(TEST) $(SRCS) test_challenge04.c
+test: $(SRCS_TEST)
+	$(CC) $(CFLAGS) -o $(TEST)  $(SRCS_TEST)
 	./$(TEST)
