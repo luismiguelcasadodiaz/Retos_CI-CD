@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "calc.h"
 #ifdef DEBUG
-#include "test_challenge06.h"
+#include "test_challenge07.h"
 #endif
 
 
