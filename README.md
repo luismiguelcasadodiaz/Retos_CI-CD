@@ -27,6 +27,8 @@ Cada challenge incluye:
 8. [Challenge 08: Matrix build en GitHub Actions](challenges_block3/challenge08/)
 9. [Challenge 09: Badges y reporting](challenges_block3/challenge09/)
 
+[![C CI](https://github.com/luismiguelcasadodiaz/Retos_CI-CD/actions/workflows/ci.yml/badge.svg)](https://github.com/luismiguelcasadodiaz/Retos_CI-CD/actions/workflows/ci.yml)
+
 ### 🔹 Nivel 4 – Docker + CD
 10. [Challenge 10: Dockerizar la aplicación en C](challenges_block4/challenge10/)
 11. [Challenge 11: GitHub Actions + Docker](challenges_block4/challenge11/)
