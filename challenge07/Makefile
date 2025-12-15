@@ -3,6 +3,7 @@ CFLAGS=-Wall -Wextra -Werror
 SRC=starter.c suma.c
 TARGET=programa
 TEST_TARGET=test_challenge06
+all: test build
 
 build: $(SRC)
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
