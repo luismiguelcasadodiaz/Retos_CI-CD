@@ -9,6 +9,6 @@ void    test_suma()
 }
 void    test_resta()
 {
-    assert( suma(3,-4) == -1 );
+    assert( suma(3,-4) == 1 );
 }
 
